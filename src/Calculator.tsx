@@ -1,22 +1,21 @@
-import { useState, FunctionComponent } from "react";
-import NumberInputArea from "./components/numberInputArea";
-import WindowControls from "./components/windowControls";
-import MacPhoto from "./components/macPhoto";
-import Buttons from "./components/generateButtons";
+import { FunctionComponent, useState } from 'react'
+import Buttons from './components/generateButtons'
+import NumberInputArea from './components/numberInputArea'
+import WindowControls from './components/windowControls'
 
 const Calculator: FunctionComponent = () => {
-  const [totalValue, setTotalValue] = useState(0);
-  const [currentOperator, setCurrentOperator] = useState("");
-  const [newInputValue, setNewInputValue] = useState(0);
+  const [totalValue, setTotalValue] = useState(0)
+  const [currentOperator, setCurrentOperator] = useState('')
+  const [newInputValue, setNewInputValue] = useState(0)
 
   const buttonProps = {
-    totalValue: totalValue,
-    setTotalValue: setTotalValue,
-    currentOperator: currentOperator,
-    setCurrentOperator: setCurrentOperator,
-    newInputValue: newInputValue,
-    setNewInputValue: setNewInputValue,
-  };
+    totalValue,
+    setTotalValue,
+    currentOperator,
+    setCurrentOperator,
+    newInputValue,
+    setNewInputValue,
+  }
 
   return (
     <section className="calculator">
@@ -24,7 +23,7 @@ const Calculator: FunctionComponent = () => {
       <NumberInputArea newInputValue={newInputValue} totalValue={totalValue} />
       <Buttons buttonProps={buttonProps} />
     </section>
-  );
-};
+  )
+}
 
-export default Calculator;
+export default Calculator
